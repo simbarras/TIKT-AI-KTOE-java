@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ProgLib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/ProgLib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
