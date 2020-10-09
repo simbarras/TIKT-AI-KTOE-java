@@ -17,8 +17,9 @@ public class Ctrl {
 
     public void letsPlay() throws Exception {
         refGame.load();
-        int winner = 0, tour = 1;
-        while (winner == 0 && tour <= 9) {
+        boolean winner = false;
+        int tour = 1, winnerRef = 0;
+        while (!winner && tour <= 9) {
             System.out.println("Tour " + tour);
             int[] val = players[tour % 2].play();
             if (!refGame.play(val[0], val[1], val[2])) {
@@ -26,9 +27,16 @@ public class Ctrl {
             }
             affiche();
             winner = refGame.checkWinner();
+            if (winner) {
+                winnerRef = tour % 2;
+            }
             tour++;
         }
-        System.out.println("The winner is player" + players[2-winner].getRef()+": "+players[2-winner].getName());
+        if (winner) {
+            System.out.println("The winner is player" + players[winnerRef].getRef() + ": " + players[winnerRef].getName());
+        } else {
+            System.out.println("There is no winner");
+        }
     }
 
 
