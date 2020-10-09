@@ -67,7 +67,6 @@ public class Bot extends HumanPlayer {
     }
 
     private int[] algoHotCoor() throws Exception {
-        //TODO
         if (boardGame[1][1] == 0) return new int[]{1, 1};
         if (boardGame[0][0] == 0) return new int[]{0, 0};
         if (boardGame[2][2] == 0) return new int[]{2, 2};
