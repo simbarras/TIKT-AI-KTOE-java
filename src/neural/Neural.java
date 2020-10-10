@@ -1,8 +1,10 @@
 package neural;
 
+import javax.sql.rowset.serial.SerialArray;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Neural {
+public class Neural implements Serializable {
 
     private double weight;
     private String type;

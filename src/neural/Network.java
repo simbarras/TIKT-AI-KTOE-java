@@ -1,8 +1,9 @@
 package neural;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Network {
+public class Network implements Serializable{
 
     private ArrayList<Neural> inputs;
     private ArrayList<Neural> hidden1;
